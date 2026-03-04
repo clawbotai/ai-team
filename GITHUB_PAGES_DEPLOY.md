@@ -9,7 +9,7 @@
 
 ### 第一步：创建 GitHub 仓库
 
-1. 登录 GitHub (keepcodinglife@outlook.com)
+1. 登录 GitHub（你的 GitHub 账户）
 2. 访问 https://github.com/new
 3. 填写信息：
    - **Repository name**: `keepcodinglife.github.io` ⚠️ 必须用这个名称才能作为主页
