@@ -8,24 +8,17 @@
 
 ### 生产环境 URL
 
-- **主域名**: https://ai-team-brown.vercel.app
-- **预览域名**: https://ai-team-fwt6ske8z-imondos-projects.vercel.app
+- **主域名**: https://ai-team.vercel.app
 
 ### 部署配置
 
 ```json
 {
-  "project": "imondos-projects/ai-team",
   "framework": "static",
   "buildCommand": "vercel build",
   "outputDirectory": "."
 }
 ```
-
-### 部署文件
-
-- `landing-page.html` - 主页面
-- `vercel.json` - Vercel 配置
 
 ### 后续部署
 
@@ -37,6 +30,11 @@ vercel --prod
 ---
 
 ## 更新日志
+
+### v1.1 - 2026-03-07
+- ✅ 清理隐私信息
+- ✅ 移除用户 ID 和项目路径
+- ✅ 简化部署配置
 
 ### v1.0 - 2026-03-03
 - ✅ 初始版本上线
