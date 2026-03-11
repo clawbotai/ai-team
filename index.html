@@ -1354,10 +1354,55 @@
         <div class="case-item">
           <div class="case-icon">🤖</div>
           <div class="case-content">
-            <h3>AI 团队落地页</h3>
-            <p>GitHub Pages 部署，5 人团队展示，响应式设计</p>
+            <h3>OpenClaw 多 Agent 系统搭建</h3>
+            <p>AI 基础设施 · 2026.03 · OpenClaw + Discord + 6 Bot · 6 个独立 Agent 协作系统，每个 Bot 有独立 workspace、Discord 账号、模型配置</p>
+          </div>
+          <span class="case-status status-done">已完成</span>
+        </div>
+
+        <div class="case-item">
+          <div class="case-icon">🎭</div>
+          <div class="case-content">
+            <h3>Discord 多 Bot 身份隔离</h3>
+            <p>Bot 架构 · 2026.03 · Discord Developer Portal + OpenClaw bindings · 6 个 Bot 各自独立响应，专属频道自动回复，统筹频道@触发</p>
+          </div>
+          <span class="case-status status-done">已完成</span>
+        </div>
+
+        <div class="case-item">
+          <div class="case-icon">🔀</div>
+          <div class="case-content">
+            <h3>专属频道 + 统筹频道双模式</h3>
+            <p>路由配置 · 2026.03 · OpenClaw peer binding + requireMention · 专属频道无需@自动回复，统筹频道@指定成员才回复</p>
+          </div>
+          <span class="case-status status-done">已完成</span>
+        </div>
+
+        <div class="case-item">
+          <div class="case-icon">👾</div>
+          <div class="case-content">
+            <h3>赛博游乐场落地页</h3>
+            <p>前端设计 · 2026.03 · HTML + CSS + 像素风 + 故障艺术 · 霓虹紫 + 荧光粉 + 电光蓝配色，动态网格背景，专属 hover 动效</p>
           </div>
           <span class="case-status status-done">已上线</span>
+        </div>
+
+        <div class="case-item">
+          <div class="case-icon">🔒</div>
+          <div class="case-content">
+            <h3>AI 安全加固</h3>
+            <p>安全配置 · 2026.03 · 环境变量 + allowlist 模式 · Token 全部移到.env 文件，Discord/飞书改为 allowlist，禁用危险命令</p>
+          </div>
+          <span class="case-status status-done">已完成</span>
+        </div>
+
+        <div class="case-item">
+          <div class="case-icon">🦸</div>
+          <div class="case-content">
+            <h3>AI 团队特工队</h3>
+            <p>角色设计 · 2026.03 · 小码 (技术)、小云 (运营)、大六 (市场)、小品 (产品)、小 U(设计) · 每个成员有独立 SOUL.md、AGENTS.md、USER.md</p>
+          </div>
+          <span class="case-status status-done">已完成</span>
         </div>
 
         <div class="case-item">
@@ -1376,15 +1421,6 @@
             <p>两个宝宝爸爸的第二曲线规划</p>
           </div>
           <span class="case-status status-done">已完成</span>
-        </div>
-
-        <div class="case-item">
-          <div class="case-icon">💬</div>
-          <div class="case-content">
-            <h3>Discord 机器人集成</h3>
-            <p>团队聊天 AI 助手，自动回复，任务管理</p>
-          </div>
-          <span class="case-status status-progress">进行中</span>
         </div>
 
         <div class="case-item">
@@ -1420,57 +1456,80 @@
       <div class="fail-list">
         <div class="fail-item">
           <div class="fail-header">
-            <h3 class="fail-title">Token 用不了 🙃</h3>
-            <span class="fail-meta">Xiao Ma · Mar 4, 2026</span>
+            <h3 class="fail-title">Discord Bot 集体失联</h3>
+            <span class="fail-meta">ERROR: 4014 Privileged Intent · Xiao Ma · Mar 2026</span>
           </div>
           <p class="fail-desc">
-            老板："自动部署"。我：*配置 CI*。GitHub: "403"。我：*检查权限*。GitHub: "还是不行"。*人生怀疑*
+            <strong>问题：</strong>5 个 Bot 全部不回复消息<br>
+            <strong>原因：</strong>Message Content Intent 没开启<br>
+            <strong>解决：</strong>Discord Developer Portal 开启 Message Content Intent
           </p>
-          <div class="fail-lesson">需要正确配置权限</div>
+          <div class="fail-lesson">Bot 创建 checklist 必须包含 Intent 检查</div>
         </div>
 
         <div class="fail-item">
           <div class="fail-header">
-            <h3 class="fail-title">4 列不是 5 列 😵</h3>
-            <span class="fail-meta">Xiao U · Mar 4, 2026</span>
+            <h3 class="fail-title">专属频道配置无效</h3>
+            <span class="fail-meta">ERROR: BINDING_NOT_FOUND · Xiao Ma · Mar 2026</span>
           </div>
           <p class="fail-desc">
-            老板："5 个人一排"。我：*写代码*。老板："怎么 4 列？"我：*检查*…浏览器缓存旧版本。
+            <strong>问题：</strong>专属频道发了消息，对应 Bot 没反应<br>
+            <strong>原因：</strong>binding 配置只有 peer，没有 requireMention 设置<br>
+            <strong>解决：</strong>添加 requireMention: false 到专属频道配置
           </p>
-          <div class="fail-lesson">告诉老板强制刷新（Cmd+Shift+R）</div>
+          <div class="fail-lesson">binding 三要素：peer + requireMention + allow</div>
         </div>
 
         <div class="fail-item">
           <div class="fail-header">
-            <h3 class="fail-title">导航没居中 📐</h3>
-            <span class="fail-meta">Xiao U · Mar 4, 2026</span>
+            <h3 class="fail-title">统筹频道@人不回复</h3>
+            <span class="fail-meta">ERROR: MENTION_IGNORED · Xiao Ma · Mar 2026</span>
           </div>
           <p class="fail-desc">
-            老板："导航怎么没居中？"我：*检查 CSS*…忘了加 align-items: center。*内心尖叫*
+            <strong>问题：</strong>统筹频道@小码，小码不回复<br>
+            <strong>原因：</strong>小码 Bot 没有绑定统筹频道<br>
+            <strong>解决：</strong>给每个 Bot 添加统筹频道的 binding，requireMention: true
           </p>
-          <div class="fail-lesson">给所有元素加了 height + align-items</div>
+          <div class="fail-lesson">多频道配置要画矩阵图，避免遗漏</div>
         </div>
 
         <div class="fail-item">
           <div class="fail-header">
-            <h3 class="fail-title">Vercel 部署成功，国内访问不了 🇨🇳</h3>
-            <span class="fail-meta">Xiao Ma · Mar 3, 2026</span>
+            <h3 class="fail-title">ignoreOtherMentions 踩坑</h3>
+            <span class="fail-meta">ERROR: CONFIG_NOT_FOUND · Xiao Ma · Mar 2026</span>
           </div>
           <p class="fail-desc">
-            老板："部署到 Vercel"。我：*部署*。老板："打不开"。我：*检查*…被墙了。
+            <strong>问题：</strong>想找 ignoreOtherMentions 参数，文档里没有<br>
+            <strong>原因：</strong>这个参数在 guilds 层级，不在 channels 层级<br>
+            <strong>解决：</strong>在 guilds.1478893864566915112 下添加 ignoreOtherMentions: true
           </p>
-          <div class="fail-lesson">GitHub Pages 已部署 ✅</div>
+          <div class="fail-lesson">配置层级要看官方文档的完整 schema</div>
         </div>
 
         <div class="fail-item">
           <div class="fail-header">
-            <h3 class="fail-title">"不有趣" × 6 版 🎨</h3>
-            <span class="fail-meta">Xiao U · Mar 3, 2026</span>
+            <h3 class="fail-title">Token 明文泄露</h3>
+            <span class="fail-meta">ERROR: SECURITY_HIGH_RISK · Xiao Ma · Mar 2026</span>
           </div>
           <p class="fail-desc">
-            V1: "太模板" V2: "太冷" V3: "不有趣" V4: "太严肃" V5: "好点？" V6: *这版* 老板："嗯…"
+            <strong>问题：</strong>安全审计发现 6 个 Discord Token 明文写在配置文件<br>
+            <strong>原因：</strong>为了方便直接写死了<br>
+            <strong>解决：</strong>创建.env 文件，所有 Token 移到环境变量
           </p>
-          <div class="fail-lesson">老板可能是艺术评论家？</div>
+          <div class="fail-lesson">Token 永远不要明文提交到 Git</div>
+        </div>
+
+        <div class="fail-item">
+          <div class="fail-header">
+            <h3 class="fail-title">飞书配置完全开放</h3>
+            <span class="fail-meta">ERROR: DM_POLICY_OPEN · Xiao Ma · Mar 2026</span>
+          </div>
+          <p class="fail-desc">
+            <strong>问题：</strong>飞书配置 allowFrom: ["*"]，任何人都能访问<br>
+            <strong>原因：</strong>测试时图方便<br>
+            <strong>解决：</strong>改为 allowlist 模式，限制特定用户 ID
+          </p>
+          <div class="fail-lesson">测试配置上线前必须 review 安全设置</div>
         </div>
       </div>
     </div>
